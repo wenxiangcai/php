@@ -1,0 +1,13 @@
+<?php 
+if(isset($_COOKIE['admin']))
+{
+	//清空cookie
+	setcookie('admin','',time()-3600);
+	//跳转admin.php验证
+	header("Location:./admin.php");
+}
+//未授权访问
+else{
+	header("Location:./admin.php");
+}
+ ?>}
